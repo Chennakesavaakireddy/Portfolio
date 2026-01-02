@@ -1,0 +1,301 @@
+/* =====================================================
+   Global Reset & Box Model Configuration
+   ===================================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* =====================================================
+   HTML Base Configuration
+   ===================================================== */
+html {
+  scroll-behavior: smooth;
+  /* Offset to prevent content being hidden under sticky header */
+  scroll-padding-top: 150px;
+}
+
+/* =====================================================
+   Body Styling
+   ===================================================== */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: radial-gradient(circle at top, #1a1a1a, #000000);
+  color: #ffffff;
+  line-height: 1.6;
+}
+
+/* =====================================================
+   Header Section
+   ===================================================== */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  text-align: center;
+  padding: 25px 15px;
+  background: linear-gradient(
+    135deg,
+    rgba(31, 41, 55, 0.85),
+    rgba(17, 24, 39, 0.85)
+  );
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Header Title */
+.header-name {
+  font-size: 2.2rem;
+}
+
+/* Header Subtitle */
+.header-role {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #cbd5e1;
+  margin-bottom: 10px;
+}
+
+/* =====================================================
+   Navigation Menu
+   ===================================================== */
+.nav-list {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 22px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #e5e7eb;
+  font-size: 0.95rem;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+/* Navigation Hover Underline Animation */
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0;
+  height: 2px;
+  background-color: #38bdf8;
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #38bdf8;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* =====================================================
+   Main Content Wrapper
+   ===================================================== */
+.main-content {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+/* =====================================================
+   Common Section Styling
+   ===================================================== */
+.section {
+  margin-bottom: 50px;
+  padding: 25px;
+  background-color: rgba(255, 255, 255, 0.02);
+  border-radius: 10px;
+}
+
+/* Section Heading */
+.section-title {
+  font-size: 1.6rem;
+  margin-bottom: 15px;
+  padding-bottom: 5px;
+  border-bottom: 2px solid #38bdf8;
+  display: inline-block;
+}
+
+/* =====================================================
+   About Section
+   ===================================================== */
+.about-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  display: block;
+  margin: 15px auto;
+  object-fit: cover;
+}
+
+.about-text {
+  text-align: center;
+  margin-top: 15px;
+  line-height: 1.5;
+}
+
+/* =====================================================
+   Skills Section
+   ===================================================== */
+.skills-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 12px;
+}
+
+.skill-item {
+  background-color: #111827;
+  padding: 10px;
+  text-align: center;
+  border-radius: 6px;
+  border: 1px solid #1f2933;
+}
+
+/* =====================================================
+   Default List Styling
+   ===================================================== */
+section ul {
+  list-style: disc;
+  padding-left: 20px;
+}
+
+section ul li {
+  margin-bottom: 8px;
+}
+
+/* =====================================================
+   Projects Section
+   ===================================================== */
+.project-item {
+  margin-bottom: 20px;
+}
+
+.project-title {
+  font-size: 1.2rem;
+  color: #38bdf8;
+  margin-bottom: 8px;
+}
+
+.project-tech {
+  margin: 8px 0;
+  padding-left: 8px;
+  border-left: 4px solid #38bdf8;
+}
+
+.project-link {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 8px 15px;
+  background-color: #111827;
+  border: 1px solid #38bdf8;
+  border-radius: 6px;
+  color: #38bdf8;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.project-link:hover {
+  background-color: #38bdf8;
+  color: #111827;
+}
+
+/* =====================================================
+   Education Section
+   ===================================================== */
+.education-item {
+  margin-bottom: 15px;
+}
+
+.education-institution {
+  font-size: 1.1rem;
+  color: #38bdf8;
+  margin-bottom: 6px;
+}
+
+.education-details {
+  background-color: #111827;
+  padding: 10px 12px;
+  border-left: 4px solid #38bdf8;
+  border-radius: 5px;
+  line-height: 1.4;
+}
+
+.education-details sup {
+  font-size: 0.8rem;
+}
+
+/* =====================================================
+   Certificates Section
+   ===================================================== */
+.certificates-list {
+  list-style: disc;
+  padding-left: 20px;
+}
+
+.certificate-item {
+  margin-bottom: 8px;
+}
+
+/* =====================================================
+   Contact Section
+   ===================================================== */
+.contact-item {
+  margin-bottom: 8px;
+}
+
+.contact-link {
+  color: #38bdf8;
+  text-decoration: none;
+}
+
+.contact-link:hover {
+  text-decoration: underline;
+}
+
+/* =====================================================
+   Footer Section
+   ===================================================== */
+.footer {
+  background-color: #0d0d0d;
+  text-align: center;
+  padding: 15px;
+  font-size: 0.9rem;
+  color: #9ca3af;
+  border-top: 1px solid #222;
+}
+
+/* =====================================================
+   Responsive Design (Mobile Devices)
+   ===================================================== */
+@media (max-width: 600px) {
+  html {
+    scroll-padding-top: 200px;
+  }
+
+  .nav-list {
+    flex-wrap: wrap;
+    gap: 14px;
+  }
+
+  .header-name {
+    font-size: 1.8rem;
+  }
+
+  .education-details {
+    font-size: 0.9rem;
+    padding: 8px;
+  }
+
+  .skills-list {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  }
+}
